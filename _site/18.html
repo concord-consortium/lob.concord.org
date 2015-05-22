@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sensing Science</title>
+<link rel="stylesheet" href="css/default.css%3Fv=20150515.css" />
+</head>
+<body>
+  <div id="page-container">
+  <div id="stage">
+      <video id="video1" poster="img/story/18.jpg">
+        <source src="video/activity/18.mp4" type="video/mp4" />
+        <source src="video/activity/18.webm" type="video/webm" />
+        <source src="video/activity/18.ogv" type="video/ogv" />
+      </video>
+    <div id="model-container">
+      <div id="iframe-container-outer">
+        <div id="iframe-container-inner">
+          <iframe id="interactive-iframe" width="100%"height="100%" src="http://lab.concord.org/embeddable.html#interactives/sensing-science/land-of-bump/model5.json"></iframe>
+        </div>
+      </div>
+      <div id="bump-stage-overlay"></div>
+    </div><!-- end #model-container -->
+    <div class="speedometer" id="red-speedometer">
+      <div class="speedometer-arrow" id="red-speedometer-arrow"></div>
+      <div class="speedometer-bump" id="red-speedometer-bump"></div>
+    </div>
+    <div class="speedometer" id="blue-speedometer">
+      <div class="speedometer-arrow" id="blue-speedometer-arrow"></div>
+      <div class="speedometer-bump" id="blue-speedometer-bump"></div>
+    </div>
+    </div><!-- /#stage -->
+    <div id="controls">
+      <div id="text">
+        <p>Explain what you think will happen when the Red Hots and Cool Blues start to dance.</p>
+      </div>
+      <a href="18.html#" id="audio" title="Play audio" onclick="document.getElementById('audio1').play(); return false;">play audio</a>
+      <div id="record-controls">
+        <a href="18.html#" id="record" title="Record audio" onclick="return false;">record audio</a>
+        <a href="18.html#" id="stop" title="Stop recording audio" onclick="return false;">stop recording audio</a>
+        <a href="18.html#" id="play" title="Play recorded audio" onclick="return false;">play recorded audio</a>
+      </div>
+      <a href="17.html" id="left" title="Go backward one page">go back</a>
+      <a href="19.html" id="right" title="Go forward one page">continue</a>
+    </div><!-- /#controls -->
+  </div><!-- /#page-container -->
+  <audio id="audio1" src="audio/18a.mp3" preload="auto" />
+  <script>
+  var instructions_counter = 0;
+  var instructions = [
+                          'Explain what you think will happen when the Red Hots and Cool Blues start to dance.',
+                          'Explain how two separators will work better than one.',
+                          'Success! The Red Hots bumped into their own separator, but that separator did not bump the Cool Blues. The Cool Blues bumped the other separator, but that separator did not bump the Red Hots. They could each perform their routine at the festival exactly how they had practiced it.'
+                          ];
+
+                          
+
+                          
+
+                          
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="http://concord-consortium.github.io/iframe-phone/dist/iframe-phone.js"></script>
+  <script src="js/interface.js%3Fv=20150515"></script>
+  <script>
+    var interactive = new iframePhone.ParentEndpoint($('#interactive-iframe')[0]);
+    
+    $(function(){
+      interactive.addListener('modelLoaded', function() {
+        interactive.post('observe', 'temperature-blue');
+        interactive.post('observe', 'temperature-red');
+      });
+    });
+    
+    function interactiveListeners() {
+      var blue_rotation, red_rotation;
+        interactive.addListener('propertyValue', function(result) {
+          if (result.name == 'temperature-blue') {
+            // do something with temp value (result.value)
+            blue_rotation = Math.round(result.value) * .036;
+            $('#blue-speedometer-arrow').css({'transform': 'rotate(' + blue_rotation + 'deg)', 'transform-origin': 'right center'});
+          }
+          if (result.name == 'temperature-red') {
+            // do something with temp value (result.value)
+            red_rotation = Math.round(result.value) * .036;
+            $('#red-speedometer-arrow').css({'transform': 'rotate(' + red_rotation + 'deg)', 'transform-origin': 'right center'});
+          }
+        });
+      
+    }
+  </script>
+</body>
+</html>

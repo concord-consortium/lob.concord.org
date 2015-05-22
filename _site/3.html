@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Land of Bump</title>
+<link rel="stylesheet" href="css/default.css" />
+</head>
+<body>
+<div id="page-container">
+  <div id="stage">
+    <video id="video1" poster="img/story/3.jpg" loop>
+      <source src="video/story/3.mp4" type="video/mp4" />
+      <source src="video/story/3.webm" type="video/webm" />
+      <source src="video/story/3.ogv" type="video/ogv" />
+    </video>
+  </div><!-- /#stage -->
+  <div id="controls">
+	<div id="text">
+	  <p>In the Land of Bump, even the people are round! All of the citizens here love to dance and, in fact, their favorite dance is called "The Bump." But not everyone dances it the same way.</p>
+	</div>
+	<a href="3.html#" id="audio" title="Play audio" onclick="document.getElementById('audio1').play(); return false;">play audio</a>
+	<div id="record-controls">
+	  <a href="3.html#" id="record" title="Record audio" onclick="return false;">record audio</a>
+	  <a href="3.html#" id="stop" title="Stop recording audio" onclick="return false;">stop recording audio</a>
+	  <a href="3.html#" id="play" title="Play recorded audio" onclick="return false;">play recorded audio</a>
+	</div>
+	<a href="2.html" id="left" title="Go backward one page">go back</a>
+	<a href="4.html" id="right" title="Go forward one page">continue</a>
+  </div><!-- /#controls -->
+</div><!-- /#page-container -->
+<audio id="audio1" src="audio/3.mp3" preload="auto" />
+<script src="js/interface.js"></script>
+</body>
+</html>
