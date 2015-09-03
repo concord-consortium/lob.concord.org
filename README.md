@@ -1,4 +1,4 @@
-# Satic website for lob.concord.org
+# Static website for lob.concord.org
 
 This repository is the home for lob.concord.org.
 Follow these directions to develop and deploy this website.
