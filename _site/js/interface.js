@@ -6,7 +6,7 @@ var images = new Array()
 function preload() {
   for (i = 0; i < preload.arguments.length; i++) {
     images[i] = new Image()
-    images[i].src = 'http://lob.concord.org/img/' + preload.arguments[i];
+    images[i].src = 'img/' + preload.arguments[i];
   }
 }
 preload(
