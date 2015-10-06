@@ -26,8 +26,6 @@ window.onload = function() {
     // set up event listener for when audio clip plays
     audio_player.addEventListener('play', loadNextInstructionSet);
 
-    // disable next page link
-    disableNextLink();
   }
   // begin speedometer flashing animation -- DISABLED FOR NOW
   //if (document.getElementById('red-speedometer')) {
@@ -93,7 +91,7 @@ function playAudio() {
   document.getElementById('audio1').play();
   if ((audio_letter == 'a' || audio_letter == '') && document.getElementById('video1')) {
     document.getElementById('video1').play();
-    if (audio_number != 18) {
+    if (audio_number != 18 && audio_number != 6) {
       document.getElementById('video1').onended = function() {
         showModel();
       }
@@ -148,21 +146,12 @@ function loadNextAudioClip() {
   }
 }
 
-// disables next page link
-function disableNextLink() {
-  var next_link = document.getElementById('right');
-  next_link.style.opacity = .5;
-  var href = next_link.getAttribute('href');
-  next_link.setAttribute('href_bak', href);
-  next_link.removeAttribute('href');
-}
-
 // enables next page link
 function enableNextLink() {
   var next_link = document.getElementById('right');
-  var href = next_link.getAttribute('href_bak');
+  var href = next_link.getAttribute('data-href');
   next_link.setAttribute('href', href);
-  next_link.style.opacity = 1;
+  next_link.classList.remove('disabled');
 }
 
 // check if files exists (not currently utilized, but may be useful in the future)

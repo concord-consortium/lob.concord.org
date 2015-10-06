@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="css/default.css" />
 </head>
 <body class="reds-only">
+<noscript><p class="warning">This page requires JavaScript to function properly. Please enable JavaScript in your browser.</p></noscript>
   <div id="page-container">
     <div id="stage">
         <video id="video1" poster="img/story/7.jpg">
@@ -44,8 +45,8 @@
           title="Play recorded audio" onclick="return false;">play
           recorded audio</a>
       </div>
-      <a href="6.html" id="left" title="Go back one page">go back</a> <a
-        href="8.html" id="right" title="Go forward one page">continue</a>
+      <a href="6.html" id="left" title="Go back one page">go back</a>
+      <a data-href="8.html" id="right" class="disabled" title="Go forward one page">continue</a>
     </div>
     <!-- /#controls -->
   </div>

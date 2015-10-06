@@ -6,22 +6,23 @@
 <link rel="stylesheet" href="css/default.css" />
 </head>
 <body>
+<noscript><p class="warning">This page requires JavaScript to function properly. Please enable JavaScript in your browser.</p></noscript>
 <div id="page-container">
   <div id="stage">
     <img src="img/story/12.jpg" alt="The Land of Bump" />
   </div><!-- /#stage -->
   <div id="controls">
-	<div id="text">
-	  <p>Uh oh. This is not the best start to the Annual Bump Dance Festival! The Red Hots and Cool Blues are disappointed because they couldn't dance their routines the way they practiced.</p>
-	</div>
-	<a href="12.html#" id="audio" title="Play audio" onclick="document.getElementById('audio1').play(); return false;">play audio</a>
-	<div id="record-controls">
-	  <a href="12.html#" id="record" title="Record audio" onclick="return false;">record audio</a>
-	  <a href="12.html#" id="stop" title="Stop recording audio" onclick="return false;">stop recording audio</a>
-	  <a href="12.html#" id="play" title="Play recorded audio" onclick="return false;">play recorded audio</a>
-	</div>
-	<a href="11.html" id="left" title="Go backward one page">go back</a>
-	<a href="13.html" id="right" title="Go forward one page">continue</a>
+  <div id="text">
+    <p>Uh oh. This is not the best start to the Annual Bump Dance Festival! The Red Hots and Cool Blues are disappointed because they couldn't dance their routines the way they practiced.</p>
+  </div>
+  <a href="12.html#" id="audio" title="Play audio" onclick="document.getElementById('audio1').play(); return false;">play audio</a>
+  <div id="record-controls">
+    <a href="12.html#" id="record" title="Record audio" onclick="return false;">record audio</a>
+    <a href="12.html#" id="stop" title="Stop recording audio" onclick="return false;">stop recording audio</a>
+    <a href="12.html#" id="play" title="Play recorded audio" onclick="return false;">play recorded audio</a>
+  </div>
+  <a href="11.html" id="left" title="Go backward one page">go back</a>
+  <a data-href="13.html" id="right" class="disabled" title="Go forward one page">continue</a>
   </div><!-- /#controls -->
 </div><!-- /#page-container -->
 <audio id="audio1" src="audio/12.mp3" preload="auto" />

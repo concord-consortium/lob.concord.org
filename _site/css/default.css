@@ -296,6 +296,12 @@ body.blues-only #bump-stage-overlay {
   width: 3.25rem;
 }
 
+.warning {
+  background: #ff6;
+  padding: 1em;
+  text-align: center;
+  }
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   /*iPad portrait orientation styles */
   #page-container { margin: 0; min-height: 38.3rem; width: 100%; }
