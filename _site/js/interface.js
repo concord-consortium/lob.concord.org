@@ -17,6 +17,7 @@ preload(
 
 window.onload = function() {
   if (document.getElementById('audio')) {
+
     // initiate audio icon flashing
     audioIconFlasher('go');
 

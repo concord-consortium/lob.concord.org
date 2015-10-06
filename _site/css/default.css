@@ -233,6 +233,7 @@ body.blues-only #bump-stage-overlay {
   height: auto;
   left: 5%;
   min-height: 4.25rem;
+  opacity: .6;
   overflow: hidden;
   position: absolute;
   text-indent: 100%;
