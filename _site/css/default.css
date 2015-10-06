@@ -208,7 +208,7 @@ body.blues-only #bump-stage-overlay {
   background: url(../img/controls/left-arrow-disabled.jpg) left center no-repeat;
 }
 
-#right {
+#right, #start-over {
   background: url(../img/controls/right-arrow-enabled.jpg) right center no-repeat;
   display: block;
   height: auto;
@@ -223,8 +223,14 @@ body.blues-only #bump-stage-overlay {
 }
 
 #right.disabled {
-  background: url(../img/controls/right-arrow-disabled.jpg) right center
-    no-repeat;
+  background: url(../img/controls/right-arrow-disabled.jpg) right center no-repeat;
+}
+
+#start-over {
+  background: url(../img/controls/start-over.png) right center no-repeat;
+  display: none;
+  height: 28px;
+  width: 180px;
 }
 
 #audio {

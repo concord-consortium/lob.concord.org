@@ -90,6 +90,9 @@ function playAudio() {
   audio_number = audio_letter.replace(/[a-z]$/g, '');
   audio_letter = audio_letter.replace(/^\d+/g, '');
   document.getElementById('audio1').play();
+  if (document.getElementById('start-over')) {
+    document.getElementById('start-over').style.display = 'block';
+  }
   if ((audio_letter == 'a' || audio_letter == '') && document.getElementById('video1')) {
     document.getElementById('video1').play();
     if (audio_number != 18 && audio_number != 6) {
