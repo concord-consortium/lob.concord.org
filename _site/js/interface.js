@@ -112,10 +112,12 @@ function playAudio() {
 
 // makes Nextgen MW model visibile, starts animation and listeners
 function showModel() {
-  document.getElementById('model-container').style.display = 'block';
-  //document.getElementById('model-container').style.visibility = 'visible';
-  interactive.post('play');
-  interactiveListeners();
+  if (document.getElementById('model-container')) {
+    document.getElementById('model-container').style.display = 'block';
+    //document.getElementById('model-container').style.visibility = 'visible';
+    interactive.post('play');
+    interactiveListeners();
+  }
 }
 
 // loads next audio clip when appropriate and/or enables next page link
@@ -152,10 +154,12 @@ function loadNextAudioClip() {
 
 // enables next page link
 function enableNextLink() {
-  var next_link = document.getElementById('right');
-  var href = next_link.getAttribute('data-href');
-  next_link.setAttribute('href', href);
-  next_link.classList.remove('disabled');
+  if (document.getElementById('right')) {
+    var next_link = document.getElementById('right');
+    var href = next_link.getAttribute('data-href');
+    next_link.setAttribute('href', href);
+    next_link.classList.remove('disabled');
+  }
 }
 
 // check if files exists (not currently utilized, but may be useful in the future)
