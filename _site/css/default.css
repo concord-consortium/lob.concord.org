@@ -248,6 +248,23 @@ body.blues-only #bump-stage-overlay {
   width: 20%;
 }
 
+#home {
+  background: url(../img/controls/home.png) center center no-repeat;
+  background-size: 100%;
+  display: block;
+  height: auto;
+  min-height: 3.5em;
+  opacity: .6;
+  overflow: hidden;
+  position: absolute;
+  right: 10%;
+  text-indent: 100%;
+  top: 1.25em;
+  white-space: nowrap;
+  width: 3.5em;
+  }
+#home:hover { opacity: 1; }
+
 #record-controls {
   display: block;
   display: none; /* hide for now */
@@ -302,6 +319,44 @@ body.blues-only #bump-stage-overlay {
   white-space: nowrap;
   width: 3.25rem;
 }
+
+.home #page-container {
+  padding-bottom: 4em;
+  width: 50em;
+  }
+  .home #page-container img.banner {
+    height: auto;
+    margin: 1em 0;
+    width: 100%;
+    }
+  .home #page-container li {
+    display: inline-block;
+    font-size: 1.25em;
+    list-style: none;
+    margin: 0;
+    margin: 1%;
+    width: 31.5%;
+    }
+  .home #page-container li:nth-child(3n+1) {
+    margin-left: 0;
+    }
+  .home #page-container li:nth-child(3n) {
+    margin-right: 0;
+    }
+    .home #page-container li a {
+      color: #2c79ba;
+      display: block;
+      height: 100%;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      }
+    .home #page-container li img {
+      float: left;
+      height: auto;
+      margin: 0 0 .25em;
+      width: 100%;
+      }
 
 .warning {
   background: #ff6;
